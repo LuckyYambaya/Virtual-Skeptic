@@ -718,126 +718,10 @@
     <!-- LEFT: POSTS -->
     <main>
 
-      <!-- Featured Post -->
-      <p class="section-label">Featured</p>
-      <article class="featured-post">
-        <a href="post-template.html">
-          <div class="featured-image">
-            <div class="featured-image-placeholder">✦</div>
-            <span class="featured-badge">Latest</span>
-          </div>
-          <div class="featured-body">
-            <div class="post-meta">
-              <span class="post-tag">Remote Work</span>
-              <span class="post-dot">·</span>
-              <span class="post-date">April 19, 2025</span>
-            </div>
-            <h2>The Meeting That Should've Been an Email (And Why We Still Schedule It)</h2>
-            <p>We've been saying it for years. The irony is that virtual workers — the ones who supposedly escaped the office culture — are somehow just as guilty. Here's why the habit persists and what we can do about it.</p>
-            <span class="read-more">Read the full piece</span>
-          </div>
-        </a>
-      </article>
-
-      <!-- Post Grid -->
-      <p class="section-label">Recent Posts</p>
-      <div class="posts-grid">
-        <article class="post-card">
-          <a href="post-template.html">
-            <div class="card-thumb">🌐</div>
-            <div class="card-body">
-              <div class="post-meta">
-                <span class="post-tag">Perspective</span>
-                <span class="post-dot">·</span>
-                <span class="post-date">Apr 12</span>
-              </div>
-              <h3>Is "Work-Life Balance" Just a Myth We Tell Ourselves?</h3>
-              <p>A skeptic's honest look at the phrase everyone uses but nobody quite achieves.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="post-card">
-          <a href="post-template.html">
-            <div class="card-thumb">💡</div>
-            <div class="card-body">
-              <div class="post-meta">
-                <span class="post-tag">Advice</span>
-                <span class="post-dot">·</span>
-                <span class="post-date">Apr 5</span>
-              </div>
-              <h3>Five Tools I Actually Use Every Day (And Five I Deleted)</h3>
-              <p>No sponsorships. No affiliate links. Just what actually survived a year of real remote work.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="post-card">
-          <a href="post-template.html">
-            <div class="card-thumb">📰</div>
-            <div class="card-body">
-              <div class="post-meta">
-                <span class="post-tag">Industry</span>
-                <span class="post-dot">·</span>
-                <span class="post-date">Mar 28</span>
-              </div>
-              <h3>What the RTO Mandates Get Wrong About Virtual Workers</h3>
-              <p>Companies keep announcing return-to-office policies. Here's what the headlines are missing.</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="post-card">
-          <a href="post-template.html">
-            <div class="card-thumb">🤔</div>
-            <div class="card-body">
-              <div class="post-meta">
-                <span class="post-tag">Opinion</span>
-                <span class="post-dot">·</span>
-                <span class="post-date">Mar 21</span>
-              </div>
-              <h3>On "Hustle Culture" and Why I Stopped Feeling Guilty</h3>
-              <p>The moment I realized my output mattered more than how many hours my screen was on.</p>
-            </div>
-          </a>
-        </article>
-      </div>
-
-      <!-- Older Posts -->
-      <p class="section-label">More to Read</p>
-
-      <article class="post-row">
-        <a href="post-template.html" style="display:flex;gap:1.5rem;width:100%;align-items:flex-start;">
-          <div class="post-row-num">01</div>
-          <div class="post-row-body">
-            <div class="post-meta"><span class="post-tag">Advice</span><span class="post-dot">·</span><span class="post-date">Mar 14</span></div>
-            <h3>How to Set Up a Home Office on Any Budget</h3>
-            <p>From zero to functional — the gear, habits, and mindset shifts that actually matter.</p>
-          </div>
-        </a>
-      </article>
-
-      <article class="post-row">
-        <a href="post-template.html" style="display:flex;gap:1.5rem;width:100%;align-items:flex-start;">
-          <div class="post-row-num">02</div>
-          <div class="post-row-body">
-            <div class="post-meta"><span class="post-tag">Perspective</span><span class="post-dot">·</span><span class="post-date">Mar 7</span></div>
-            <h3>The Loneliness Nobody Talks About in Remote Work</h3>
-            <p>It's not always freedom. Sometimes it's just quiet — and not the good kind.</p>
-          </div>
-        </a>
-      </article>
-
-      <article class="post-row">
-        <a href="post-template.html" style="display:flex;gap:1.5rem;width:100%;align-items:flex-start;">
-          <div class="post-row-num">03</div>
-          <div class="post-row-body">
-            <div class="post-meta"><span class="post-tag">Opinion</span><span class="post-dot">·</span><span class="post-date">Feb 28</span></div>
-            <h3>AI Won't Replace Virtual Workers — But It'll Change Everything</h3>
-            <p>My honest take on where the tools help and where they still fall flat.</p>
-          </div>
-        </a>
-      </article>
+      <!-- Posts injected by posts.js -->
+      <div id="featured-post-slot"></div>
+      <div id="recent-posts-slot"></div>
+      <div id="more-posts-slot"></div>
 
     </main>
 
@@ -912,5 +796,100 @@
     </div>
   </footer>
 
+  <script src="posts.js"></script>
+  <script>
+    // ── Renders the homepage from the POSTS array in posts.js ──
+
+    function thumbHTML(post) {
+      if (post.image) {
+        return `<div class="featured-image" style="height:340px;padding:0;overflow:hidden;">
+          <img src="${post.image}" alt="${post.title}" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"/>
+          <span class="featured-badge">Latest</span>
+        </div>`;
+      }
+      return `<div class="featured-image"><div class="featured-image-placeholder">✦</div><span class="featured-badge">Latest</span></div>`;
+    }
+
+    function cardThumbHTML(post) {
+      if (post.image) {
+        return `<div class="card-thumb" style="padding:0;overflow:hidden;"><img src="${post.image}" alt="${post.title}" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"/></div>`;
+      }
+      return `<div class="card-thumb">✦</div>`;
+    }
+
+    function buildHomepage() {
+      if (!window.POSTS || POSTS.length === 0) return;
+
+      const featured = POSTS[0];
+      const recent   = POSTS.slice(1, 5);
+      const more     = POSTS.slice(5);
+
+      // ── Featured ──
+      document.getElementById('featured-post-slot').innerHTML = `
+        <p class="section-label">Featured</p>
+        <article class="featured-post">
+          <a href="${featured.file}">
+            ${thumbHTML(featured)}
+            <div class="featured-body">
+              <div class="post-meta">
+                <span class="post-tag">${featured.tag}</span>
+                <span class="post-dot">·</span>
+                <span class="post-date">${featured.date}</span>
+              </div>
+              <h2>${featured.title}</h2>
+              <p>${featured.excerpt}</p>
+              <span class="read-more">Read the full piece</span>
+            </div>
+          </a>
+        </article>`;
+
+      // ── Recent grid (up to 4) ──
+      if (recent.length > 0) {
+        const cards = recent.map(p => `
+          <article class="post-card">
+            <a href="${p.file}">
+              ${cardThumbHTML(p)}
+              <div class="card-body">
+                <div class="post-meta">
+                  <span class="post-tag">${p.tag}</span>
+                  <span class="post-dot">·</span>
+                  <span class="post-date">${p.date}</span>
+                </div>
+                <h3>${p.title}</h3>
+                <p>${p.excerpt}</p>
+              </div>
+            </a>
+          </article>`).join('');
+
+        document.getElementById('recent-posts-slot').innerHTML = `
+          <p class="section-label">Recent Posts</p>
+          <div class="posts-grid">${cards}</div>`;
+      }
+
+      // ── More posts rows (5th post onwards) ──
+      if (more.length > 0) {
+        const rows = more.map((p, i) => `
+          <article class="post-row">
+            <a href="${p.file}" style="display:flex;gap:1.5rem;width:100%;align-items:flex-start;">
+              <div class="post-row-num">${String(i + 1).padStart(2, '0')}</div>
+              <div class="post-row-body">
+                <div class="post-meta">
+                  <span class="post-tag">${p.tag}</span>
+                  <span class="post-dot">·</span>
+                  <span class="post-date">${p.date}</span>
+                </div>
+                <h3>${p.title}</h3>
+                <p>${p.excerpt}</p>
+              </div>
+            </a>
+          </article>`).join('');
+
+        document.getElementById('more-posts-slot').innerHTML = `
+          <p class="section-label">More to Read</p>${rows}`;
+      }
+    }
+
+    buildHomepage();
+  </script>
 </body>
 </html>
