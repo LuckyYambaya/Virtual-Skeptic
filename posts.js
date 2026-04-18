@@ -4,7 +4,7 @@
 //  of the list below. That's it. Save and upload this file.
 // ============================================================
 
-const POSTS = [
+var POSTS = [
 
   {
     file:    "are-employers-gauging-desperation.html",
