@@ -1,0 +1,33 @@
+# Virtual Skeptic
+
+> A personal blog by a virtual worker sharing honest thoughts, practical advice, and unfiltered perspectives on remote work, digital professional life, and the world of online workers.
+
+## About
+
+Virtual Skeptic is written by a practicing virtual worker — not a consultant, coach, or content marketer. Posts cover the real experience of working remotely: the tools, the frustrations, the industry trends, and the mindset shifts that matter.
+
+The "Skeptic" in the name is intentional: this blog questions popular narratives about remote work rather than amplifying them uncritically.
+
+## Topics Covered
+
+- Remote work and virtual work culture
+- Productivity tools and honest reviews
+- Work-life balance (and its limits)
+- Return-to-office (RTO) debates and analysis
+- AI and technology for remote workers
+- Mental health, isolation, and the social realities of remote work
+- Freelance and gig economy perspectives
+- Career advice for virtual professionals
+
+## Content Philosophy
+
+- First-person, opinion-driven writing
+- No sponsored posts or affiliate-driven recommendations
+- Practical, experience-based advice
+- Engagement with current events in the remote work space
+
+## Pages
+
+- [Home](https://virtualskeptic.com/): Blog index with featured and recent posts
+- [About](https://virtualskeptic.com/about.html): Background on the blog and its author
+- [Sample Post](https://virtualskeptic.com/meeting-should-have-been-email.html): "The Meeting That Should've Been an Email"

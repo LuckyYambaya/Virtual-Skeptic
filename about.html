@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Virtual Skeptic</title>
+  <meta name="description" content="Virtual Skeptic is a personal blog by a virtual worker sharing honest thoughts, advice, and perspectives on remote work and digital professional life." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://virtualskeptic.com/about.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Virtual Skeptic",
+    "url": "https://virtualskeptic.com",
+    "sameAs": [],
+    "description": "Virtual worker and blogger sharing honest perspectives on remote work and digital professional life."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #FAF7F2; --parchment: #F0EAE0; --espresso: #2C2416; --bark: #5C4A32;
+      --terracotta: #C4622D; --terracotta-light: #E8845A; --sage: #6B7C5C;
+      --warm-gray: #D6CCBC; --white: #FFFFFF;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--espresso); font-family: 'Lora', Georgia, serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    header { background: var(--white); border-bottom: 1px solid var(--warm-gray); position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--espresso); letter-spacing: -0.02em; }
+    .logo span { color: var(--terracotta); }
+    nav { display: flex; gap: 2rem; }
+    nav a { font-family: 'DM Sans', sans-serif; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bark); transition: color 0.2s; }
+    nav a:hover { color: var(--terracotta); }
+
+    /* HERO */
+    .about-hero {
+      background: var(--espresso); padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .about-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(107,124,92,0.2) 0%, transparent 55%);
+    }
+    .about-hero-inner { position: relative; z-index: 1; }
+    .about-avatar-large {
+      width: 100px; height: 100px; border-radius: 50%; background: var(--terracotta);
+      margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--white); font-weight: 700;
+      border: 3px solid rgba(250,247,242,0.15);
+    }
+    .about-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; color: var(--cream); letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .about-hero p { font-family: 'Lora', serif; font-style: italic; font-size: 1.05rem; color: rgba(250,247,242,0.6); max-width: 500px; margin: 0 auto; }
+
+    /* CONTENT */
+    .about-content { max-width: 780px; margin: 0 auto; padding: 4rem 2rem; }
+
+    .about-section { margin-bottom: 3.5rem; }
+    .section-eyebrow {
+      font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--terracotta); display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;
+    }
+    .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--warm-gray); }
+
+    .about-section h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.25rem; line-height: 1.2; }
+    .about-section p { color: var(--bark); line-height: 1.85; margin-bottom: 1.25rem; }
+    .about-section p:last-child { margin-bottom: 0; }
+
+    blockquote {
+      border-left: 3px solid var(--terracotta); padding: 1rem 1.5rem;
+      margin: 2rem 0; background: var(--parchment); border-radius: 0 4px 4px 0;
+    }
+    blockquote p { font-style: italic; font-size: 1.05rem; color: var(--espresso); opacity: 0.85; margin: 0; }
+
+    /* Values */
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.5rem; }
+    .value-item { background: var(--white); border-radius: 4px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(44,36,22,0.07); }
+    .value-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .value-item h4 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .value-item p { font-size: 0.875rem; color: var(--bark); opacity: 0.8; margin: 0; line-height: 1.6; }
+
+    /* Contact */
+    .contact-card {
+      background: var(--espresso); color: var(--cream); border-radius: 4px; padding: 2.5rem; text-align: center;
+    }
+    .contact-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .contact-card p { font-size: 0.95rem; opacity: 0.7; margin-bottom: 1.75rem; }
+    .contact-email {
+      display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 0.875rem; font-weight: 500;
+      color: var(--terracotta-light); letter-spacing: 0.05em; border-bottom: 1px solid rgba(232,132,90,0.3);
+      padding-bottom: 0.1rem; transition: border-color 0.2s;
+    }
+    .contact-email:hover { border-color: var(--terracotta-light); }
+
+    footer { background: var(--espresso); color: var(--cream); padding: 2rem; margin-top: 0; text-align: center; }
+    .footer-bottom { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; opacity: 0.4; }
+
+    @media (max-width: 600px) {
+      .values-grid { grid-template-columns: 1fr; }
+      nav a { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">Virtual <span>Skeptic</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#topics">Topics</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <div class="about-avatar-large">VS</div>
+      <h1>About Virtual Skeptic</h1>
+      <p>A corner of the internet for the unfiltered realities of working virtually.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="about-content">
+
+    <div class="about-section">
+      <p class="section-eyebrow">The origin</p>
+      <h2>Why I started this blog</h2>
+      <p>I've been working virtually for years. Through different roles, different clients, different time zones, and different versions of what "remote work" means depending on who's defining it.</p>
+      <p>What I kept noticing — and what kept bothering me — was the gap between how virtual work is packaged online and what it actually feels like to live it. The glossy productivity content. The hustle-flavored advice. The threads that make it look like everyone with a laptop and a Wi-Fi connection is thriving.</p>
+      <p>Virtual Skeptic is my attempt to talk about it honestly. The good stuff, the frustrating stuff, and the stuff in between that doesn't fit neatly into a listicle.</p>
+
+      <blockquote>
+        <p>"Skeptic doesn't mean cynical. It means I'd rather think it through than take it on faith."</p>
+      </blockquote>
+    </div>
+
+    <div class="about-section">
+      <p class="section-eyebrow">What you'll find here</p>
+      <h2>The kind of writing I do</h2>
+      <p>This blog covers the world of virtual and remote work — but through the lens of someone actually doing it, not consulting about it. You'll find:</p>
+
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="value-icon">💬</div>
+          <h4>Opinions</h4>
+          <p>Takes on remote work trends, industry news, and the ideas everyone seems to accept without questioning.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🛠</div>
+          <h4>Practical Advice</h4>
+          <p>Tools, habits, and frameworks that actually held up after real use — not just things that sound good in theory.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🔍</div>
+          <h4>Perspectives</h4>
+          <p>Different angles on the remote work experience — productivity, isolation, culture, money, time, identity.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">📰</div>
+          <h4>Current Events</h4>
+          <p>Reactions to relevant news — RTO mandates, AI tools, platform changes, and what they mean for virtual workers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <p class="section-eyebrow">A note on trust</p>
+      <h2>No hidden agenda</h2>
+      <p>I don't accept sponsored posts. If I recommend a tool, it's because I use it. If I criticise something, it's because I genuinely think there's a problem worth naming. When this blog eventually runs ads, they'll be clearly labelled and won't influence what I write.</p>
+      <p>That's the whole point of the "Skeptic" part. I'm not here to sell you anything except, hopefully, a useful perspective.</p>
+    </div>
+
+    <div class="about-section" id="contact">
+      <div class="contact-card">
+        <h3>Get in touch</h3>
+        <p>Have a topic you want me to write about? A disagreement? A question? I actually read my messages.</p>
+        <a href="mailto:hello@virtualskeptic.com" class="contact-email">hello@virtualskeptic.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-bottom">© 2025 Virtual Skeptic. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
