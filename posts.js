@@ -7,6 +7,15 @@
 var POSTS = [
 
   {
+    file:    "cut-the-middlemen.html",
+    image:   "cut-the-middlemen.png",
+    title:   "Time for Companies Abroad to Cut the Middlemen",
+    excerpt: "On direct hiring Filipino talents and what it actually costs to hire from an agency. Agencies are charging you double — and pocketing the difference every single month.",
+    tag:     "Opinion",
+    date:    "April 19, 2026"
+  },
+
+  {
     file:    "are-employers-gauging-desperation.html",
     image:   "are-employers-gauging-desperation.png",
     title:   "Are Employers Gauging Your Desperation?",
